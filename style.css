@@ -1,0 +1,465 @@
+body {
+    font-family: "Poiret One", sans-serif !important;
+    color: #ffffff !important;
+    background-color: #101010 !important;
+    overflow-x: hidden;
+    text-transform: capitalize;
+    /* padding-bottom: 200px; */
+}
+
+/* Hero Section styles*/
+
+.navToggle {
+    width: 30px;
+    height: 30px;
+    background-image: url('/img/toggleIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav a {
+    color: white !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+
+nav a:hover {
+    color: #FF1212 !important;
+}
+
+.nav-link.active {
+    color: #FF1212 !important;
+}
+
+.hero-header {
+    padding: 200px 100px;
+
+}
+
+@media (max-width:564px) {
+
+    .hero-header {
+        padding: 128px 50px;
+
+    }
+
+    .line {
+        max-width: 50px !important;
+
+    }
+}
+
+.hero-header h1 {
+    font-size: clamp(4rem, 7vw, 5.5rem);
+    font-weight: 500;
+
+}
+
+.hero-header p {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 500;
+}
+
+.hero {
+    background-image: url("/img/heroBg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.button-secondary {
+    font-weight: 600 !important;
+    color: white !important;
+    background: #FF040433 !important;
+    padding: 12px 30px !important;
+    border: 1px solid #ffffff !important;
+    font-size: 20px !important;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.849);
+}
+
+.button-secondary:hover {
+    background: #ff04045e !important;
+    box-shadow: 0 0 40px rgba(235, 2, 2, 0.607);
+
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 10px;
+
+}
+
+.section-title .line {
+    flex: 1;
+    height: 1px;
+    background-color: white;
+    position: relative;
+}
+
+.section-title .line.left::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    transform: translateY(-55%) rotate(55deg);
+}
+
+.section-title .line.right::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    transform: translateY(-60%) rotate(42deg);
+}
+
+.section-title .line.left::after {
+    right: -8px;
+}
+
+.section-title .line.right::after {
+    left: -8px;
+}
+
+.section-title .text {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: bold;
+    color: white;
+}
+
+.line {
+    max-width: 100px;
+
+}
+
+
+/* about us section */
+
+h3 {
+    font-weight: bold !important;
+    margin-top: 50px !important;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem) !important;
+
+}
+
+h1 {
+    font-size: clamp(3.5rem, 6vw, 5.2rem) !important;
+    font-weight: 500 !important;
+
+}
+
+h4 {
+    font-size: clamp(2.5rem, 5vw, 3.2rem) !important;
+    font-weight: 500 !important;
+
+}
+
+footer h5 {
+    font-size: clamp(2rem, 5vw, 2.2rem) !important;
+
+}
+
+p {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 500;
+}
+
+.about-us-img-section {
+    background-image: url("/img/about-us-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+
+.cardBody {
+    background-color: #2F2F2F !important;
+    color: #ffffff !important;
+}
+
+.card {
+    border: none !important;
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 20px 22px rgba(105, 100, 100, 0.181);
+}
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+
+
+.card-title {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 600;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    background-color: #2F2F2F !important;
+    border: none;
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-indicators .active {
+    background-color: #FF4141 !important;
+    transform: scale(1.1);
+}
+
+
+/* gallery section */
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s ease;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* dishes section */
+
+.paneer-card {
+    background-image: url("/img/panneer.png");
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+}
+
+.biriyani-card {
+    background-image: url("/img/biriyani.png");
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+}
+
+.bread-slices-card {
+    background-image: url("/img/bread-slices.png");
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+}
+
+.chicken-soup-card {
+    background-image: url("/img/thai-food-spicy-chicken-tendon-soup.png");
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+}
+
+.discount-menu {
+    display: flex;
+    justify-content: end;
+}
+
+.menu-discount {
+    background-color: #FF06064D;
+    border-radius: 10px;
+
+}
+
+.paneer-label {
+    padding: 10px 30px !important;
+    align-items: center;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    background-color: #00000080;
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 0px 20px 20px;
+}
+
+.blog-sec-card {
+    background-image: url("/img/blogImg1.png");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.blog-sec-cardTwo {
+    background-image: url("/img/blogImg2.png");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.blog-sec-cardThree {
+    background-image: url("/img/blogImg3.png");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 25% !important;
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* blog section */
+
+.custom-prev-icon {
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.custom-prev {
+    left: 20px;
+}
+
+.custom-prev-icon i {
+    color: white;
+}
+
+
+.custom-next-icon {
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.custom-next {
+    right: 20px;
+}
+
+.custom-next-icon i {
+    color: white;
+}
+
+.custom-prev,
+.custom-next {
+    position: static !important;
+}
+
+
+/* contact us section */
+
+.social-icon {
+    background-color: #FF4141;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.redLine {
+    width: 300px;
+    height: 1px;
+    background-color: #FF3D3D;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.contact-heading {
+
+    border-bottom: 2px solid #FF3D3D;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* order with best deals section */
+
+.ready-order {
+    background-image: url("/img/ready-orderImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+/* footer section */
+
+.footer-sec {
+    background-image: url("/img/footerImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+::placeholder {
+    color: #fcfcfc !important;
+}
+
+.links:hover {
+    color: #FF1212 !important;
+    font-weight: bold !important;
+}
+
+.goTopButton {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.goTopButton a {
+    text-decoration: none;
+    color: #FF1212;
+    transition: transform 0.3s ease-in-out;
+}
+
+.goTopButton a:hover {
+    transform: scale(1.2);
+}

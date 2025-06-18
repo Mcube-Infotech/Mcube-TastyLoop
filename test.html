@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us Section</title>
+  <style>
+    body {
+      background-color: #111;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 60px 0;
+      
+    }
+
+    .section-title .line {
+      flex: 1;
+      height: 1px;
+      background-color: white;
+      position: relative;
+    }
+
+    .section-title .line.left::after,
+    .section-title .line.right::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .section-title .line.left::after {
+      right: -10px;
+    }
+
+    .section-title .line.right::after {
+      left: -10px;
+    }
+
+    .section-title .text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .line{
+        max-width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- About Us Section -->
+<div class="section-title">
+  <div class="line left"></div>
+  <div class="text">About Us</div>
+  <div class="line right"></div>
+</div>
+
+</body>
+</html>

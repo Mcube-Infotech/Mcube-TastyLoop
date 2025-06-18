@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyLoop</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicons.png" type="image/x-icon">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poiret+One&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <!-- css links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- Bootstrap Icons (For Icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- js links -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="/main.js"></script>
+
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero" id="hero">
+            <nav class="navbar navbar-expand-lg py-3 blur-on-scroll"
+                style="position: fixed; width: 100%; z-index: 100;">
+
+                <div class="container-fluid" style="background-color: transparent !important;">
+                    <a class="navbar-brand d-flex align-items-center" href="#" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-center" data-aos-duration="1000">
+                        <img src="/img/logoWithName.png" alt="Logo" style="width: 150px;" class="me-2">
+                    </a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+                        <div class="navToggle">
+                        </div>
+                    </button>
+                    <!-- Desktop Nav (≥ 992px only) -->
+                    <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex"
+                        id="navbarNavDropdown">
+                        <ul class="navbar-nav" style="gap: 45px;" data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-center" data-aos-duration="1500">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#hero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about-us">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#dishes">Dishes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact-us">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Desktop Icons (≥ 992px only) -->
+                    <div class="d-none d-lg-flex align-items-center gap-4" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-center" data-aos-duration="1500">
+                        <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                        <a class="nav-link" href="#"><i class="bi bi-bag-dash"></i></a>
+                        <a class="nav-link" href="#"><i class="bi bi-list"></i></a>
+                    </div>
+                    <!-- Offcanvas for Mobile (< 992px only) -->
+                    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu"
+                        aria-labelledby="mobileMenuLabel"
+                        style="margin: 30px !important; padding: 20px; width: 250px; border-radius: 25px;height: 100vh;">
+                        <div class="offcanvas-header justify-content-between">
+                            <img src="/img/singleLogo.png" alt="" width="100px">
+                            <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                                    class="bi bi-x-circle text-white fs-2"></i></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column gap-3 p-4 justify-content-between">
+                            <ul class="navbar-nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#hero"><i
+                                            class="bi bi-house-door me-2"></i>Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about-us"><i class="bi bi-info-circle me-2"></i>About
+                                        Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#dishes"><i class="bi bi-basket me-2"></i>Dishes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gallery"><i class="bi bi-images me-2"></i>Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#blog"><i class="bi bi-journal-text me-2"></i>Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact-us"><i class="bi bi-envelope me-2"></i>Contact
+                                        Us</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex gap-3 mt-4">
+                                <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                                <a class="nav-link" href="#"><i class="bi bi-bag-dash"></i></a>
+                                <a class="nav-link" href="#"><i class="bi bi-list"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-header">
+                <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    Bringing Authentic Flavors <br> to Your Plate.
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+                    Experience the richness of South Indian cuisine — made <br> with love, tradition, and handpicked
+                    ingredients.
+                </p>
+                <button type="button" class="btn btn-secondary button-secondary" data-aos="fade-up" data-aos-delay="300"
+                    data-aos-duration="1000">Explore Now</button>
+            </div>
+        </section>
+
+        <!-- About-us section -->
+        <section class="about-us" id="about-us">
+            <div class="about-us-header-section mt-4">
+                <div class="section-title">
+                    <div class="line left me-2" style="min-width: 50px !important;"></div>
+                    <div class="text" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">About Us</div>
+                    <div class="line right ms-2"></div>
+                </div>
+                <h1 class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    A Story Cooked with Tradition.
+                </h1>
+                <p class="text-center p-2" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">At Mcube
+                    Tasty Loop, we believe food is more than just taste — it's emotion,
+                    culture, and
+                    connection. <br> Rooted in timeless South Indian recipes and inspired by local flavors, our chefs
+                    craft
+                    each dish with care, <br> heritage, and flavor in every bite.</p>
+            </div>
+            <div class="about-us-img-section d-flex justify-content-center align-items-center mt-4" data-aos="zoom-in"
+                data-aos-delay="100" data-aos-duration="1000">
+                <div class="d-flex  ">
+                    <button type="button" class="btn btn-secondary button-secondary">See Our Story</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dishes section -->
+        <section class="dishes" id="dishes">
+            <div class=" mt-4">
+                <div class="section-title">
+                    <div class="line left me-2" style="min-width: 50px !important;"></div>
+                    <div class="text" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Dishes</div>
+                    <div class="line right ms-2"></div>
+                </div>
+                <h1 class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    A Feast of Flavors.
+                </h1>
+                <p class="text-center p-2" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">Whether
+                    you're a spice lover, a vegetarian, or a first-time explorer of South
+                    Indian cuisine there's <br> something here for every palate.</p>
+            </div>
+            <div class="food-varieties p-4">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center px-3 " style="padding-bottom: 70px;"
+                                data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                                <!-- Card 1 -->
+                                <div class="col-md-3 mb-3">
+                                    <div class="card ">
+                                        <img src="/img/chettinadChicken.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Chettinad Chicken <br> Curry</strong>
+                                                </h5>
+                                                <p><b>₹ 200</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/nonVegThali.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Dry-roasted <br> chicken</strong></h5>
+                                                <p><b>₹ 280</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/dryRoastChicken.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Non-Veg <br>
+                                                        Thali</strong></h5>
+                                                <p><b>₹ 250</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/mushroomPepper.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Mushroom pepper <br> fry</strong></h5>
+                                                <p><b>₹ 220</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center px-3" style="padding-bottom: 70px;">
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img src="/img/dishescardImg1.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong> Spicy Chicken <br> Fry</strong></h5>
+                                                <p><b>₹ 200</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/dishescardImg2.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Classic <br> Chicken thali</strong></h5>
+                                                <p><b>₹ 280</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/dishescardImg3.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Chicken <br> Colo</strong></h5>
+                                                <p><b>₹ 250</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/dishescardImg4.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Chicken Masala <br> Roll</strong></h5>
+                                                <p><b>₹ 220</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center px-3 " style="padding-bottom: 70px;">
+                                <div class="col-md-3 mb-3">
+                                    <div class="card ">
+                                        <img src="/img/chettinadChicken.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Chettinad Chicken <br> Curry</strong>
+                                                </h5>
+                                                <p><b>₹ 200</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/nonVegThali.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Dry-roasted <br> chicken</strong></h5>
+                                                <p><b>₹ 280</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/dryRoastChicken.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Non-Veg <br>
+                                                        Thali</strong></h5>
+                                                <p><b>₹ 250</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Card 4 -->
+                                <div class="col-md-3 mb-3">
+                                    <div class="card border-0">
+                                        <img src="/img/mushroomPepper.png" class="card-img-top" alt="...">
+                                        <div class="card-body cardBody">
+                                            <div class="d-flex justify-content-between align-items-end">
+                                                <h5 class="card-title"><strong>Mushroom pepper <br> fry</strong></h5>
+                                                <p><b>₹ 220</b></p>
+                                            </div>
+                                            <div class="d-flex justify-content-center p-3">
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators mt-4 gap-2">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 2"></button>
+                    </div>
+                </div>
+            </div>
+            <div id="carouselExampleTwoIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid px-0" style="padding-bottom: 80px;">
+                            <div class="row g-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                                    <div
+                                        class="food-card paneer-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>25% OFF</b></h5>
+                                                <h5><b>₹ 200</b></h5>
+                                            </div>
+                                        </div>
+                                        <div class="paneer-label d-flex ">
+                                            <div class="d-grid">
+                                                <h4>paneer</h4>
+                                                <p>Cottage cheese tossed in spicy <br> South Indian masala.</p>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                                    <div
+                                        class="food-card biriyani-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>35% OFF</b></h5>
+                                                <h5><b>₹ 280</b></h5>
+                                            </div>
+                                        </div>
+                                        <div class="paneer-label d-flex ">
+                                            <div class="d-grid">
+                                                <h4>Biryani</h4>
+                                                <p>Cottage cheese tossed in spicy <br> South Indian masala.</p>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid px-0" style="padding-bottom: 80px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <div
+                                        class="food-card bread-slices-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>25% OFF</b></h5>
+                                                <h5><b>₹ 200</b></h5>
+                                            </div>
+                                        </div>
+                                        <div class="paneer-label d-flex">
+                                            <div class="d-grid">
+                                                <h4>Bread Slices</h4>
+                                                <p>Toasted bread served with flavorful <br> South Indian style chicken
+                                                    topping.</p>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div
+                                        class="food-card chicken-soup-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>35% OFF</b></h5>
+                                                <h5><b>₹ 280</b></h5>
+                                            </div>
+                                        </div>
+                                        <div class="paneer-label d-flex">
+                                            <div class="d-grid">
+                                                <h4>Spicy Chicken Soup</h4>
+                                                <p>Aromatic soup packed with tender <br> chicken and bold South Indian
+                                                    spices.</p>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid px-0" style="padding-bottom: 80px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <div
+                                        class="food-card paneer-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>25% OFF</b></h5>
+                                                <h5><b>₹ 200</b></h5>
+                                            </div>
+                                        </div>
+                                        <div class="paneer-label d-flex ">
+                                            <div class="d-grid">
+                                                <h4>paneer</h4>
+                                                <p>Cottage cheese tossed in spicy <br> South Indian masala.</p>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div
+                                        class="food-card biriyani-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>35% OFF</b></h5>
+                                                <h5><b>₹ 280</b></h5>
+                                            </div>
+                                        </div>
+                                        <div class="paneer-label d-flex ">
+                                            <div class="d-grid">
+                                                <h4>Biryani</h4>
+                                                <p>Cottage cheese tossed in spicy <br> South Indian masala.</p>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators mt-4 gap-2">
+                    <button type="button" data-bs-target="#carouselExampleTwoIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleTwoIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleTwoIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery section -->
+        <section class="gallery" id="gallery">
+            <div class=" mt-4">
+                <div class="section-title">
+                    <div class="line left me-2" style="min-width: 50px !important;"></div>
+                    <div class="text" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Gallery</div>
+                    <div class="line right ms-2"></div>
+                </div>
+                <h1 class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    A Visual Taste of Tradition.
+                </h1>
+                <p class="text-center p-2" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">Take a peek
+                    into our kitchen, dishes, and warm dining atmosphere. <br> From
+                    sizzling starters to soul-satisfying thalis every frame tells a delicious story.</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-md-3 mb-3">
+                        <div class="image-wrapper" style="background-image: url('/img/gridImg1.png');"
+                            data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                            <div class="overlay">
+                                <div>
+                                    <h4>Delicious Curry</h4>
+                                    <p>Try our authentic spicy dish!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="image-wrapper" style="background-image: url('/img/gridImg2.png');"
+                                    data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                                    <div class="overlay">
+                                        <div>
+                                            <h4>Sizzling Hot!</h4>
+                                            <p>Freshly served to your plate.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="image-wrapper" style="background-image: url('/img/gridImg3.png');"
+                                    data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                                    <div class="overlay">
+                                        <div>
+                                            <h4>Chef Special</h4>
+                                            <p>Don’t miss the magic.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="image-wrapper" style="background-image: url('/img/gridImg4.png');"
+                            data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                            <div class="overlay">
+                                <div>
+                                    <h4>Grilled Perfection</h4>
+                                    <p>Charcoal flavor at its best.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="image-wrapper"
+                            style="background-image: url('/img/gridImg5.png'); min-height: 300px;" data-aos="zoom-in"
+                            data-aos-delay="100" data-aos-duration="1000">
+                            <div class="overlay">
+                                <div>
+                                    <h4>Full Feast</h4>
+                                    <p>Your taste journey starts here.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog section -->
+        <section class="blog-section" id="blog">
+            <div class=" mt-4">
+                <div class="section-title">
+                    <div class="line left me-2" style="min-width: 50px !important;"></div>
+                    <div class="text" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Blog</div>
+                    <div class="line right ms-2"></div>
+                </div>
+                <h1 class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    From Our Kitchen to Your Screen.
+                </h1>
+                <p class="text-center p-2" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">Explore
+                    stories, tips, and traditions behind every dish. <br> Whether you're
+                    a
+                    foodie, home cook, or just curious our blog brings flavor to your feed!</p>
+            </div>
+            <div id="carouselExampleThreeIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid  p-4" style="padding-bottom: 80px;">
+                            <div class="row g-0">
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1200">
+                                    <div
+                                        class="food-card blog-sec-card text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>15 Janaury</b></h5>
+                                                <h5><b>2025</b></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4">
+                                        <div class="mb-3">
+                                            <h2 class="mb-3" data-aos="fade-up" data-aos-delay="200"
+                                                data-aos-duration="1000"> <b>A Team That Eats Together, Cooks Better
+                                                    Together.</b>
+                                            </h2>
+                                            <p style="margin-top: 60px;" data-aos="fade-up" data-aos-delay="250"
+                                                data-aos-duration="1000">
+                                                Moments like these remind us that behind every great dish is a happy
+                                                team,
+                                                and behind every satisfied customer
+                                                is a group of people who care deeply – not just about food, but about
+                                                each
+                                                other.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <span style="color: #FF2B2B; font-weight: 500;">
+                                                <p data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+                                                    <b>Mr. Surya</b>
+                                                </p>
+                                            </span>
+                                            <span class="ms-3" data-aos="fade-up" data-aos-delay="250"
+                                                data-aos-duration="1000">
+                                                <i class="bi bi-chat-dots-fill text-secondary"></i> 3 Comments
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-start gap-3 mt-4">
+                                            <div class="container d-flex text-center mt-4 gap-4">
+                                                <button class="carousel-control-prev custom-prev" type="button"
+                                                    data-bs-target="#carouselExampleThreeIndicators"
+                                                    data-bs-slide="prev">
+                                                    <span
+                                                        class="custom-prev-icon d-flex align-items-center justify-content-center">
+                                                        <i class="bi bi-chevron-left"></i>
+                                                    </span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+
+                                                <button class="carousel-control-next custom-next" type="button"
+                                                    data-bs-target="#carouselExampleThreeIndicators"
+                                                    data-bs-slide="next">
+                                                    <span
+                                                        class="custom-next-icon d-flex align-items-center justify-content-center">
+                                                        <i class="bi bi-chevron-right"></i>
+                                                    </span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container-fluid  p-4" style="padding-bottom: 80px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <div
+                                        class="food-card blog-sec-cardTwo text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>03 April</b></h5>
+                                                <h5><b>2025</b></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4">
+                                        <div class="mb-3">
+                                            <h2 class="mb-3"><b>Great Meals Start with Great Teamwork</b></h2>
+                                            <p style="margin-top: 60px;">
+                                                Behind every flavorful bite is a team that collaborates, laughs, and
+                                                grows together. It's not just about cooking—it's about sharing passion,
+                                                creating memories, and serving joy with every dish.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <span style="color: #FF2B2B; font-weight: 500;">
+                                                <p><b>Mr. Santy</b></p>
+                                            </span>
+                                            <span class="ms-3">
+                                                <i class="bi bi-chat-dots-fill text-secondary"></i> 3 Comments
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-start gap-3 mt-4">
+                                            <div class="container d-flex text-center mt-4 gap-4">
+                                                <button class="carousel-control-prev custom-prev" type="button"
+                                                    data-bs-target="#carouselExampleThreeIndicators"
+                                                    data-bs-slide="prev">
+                                                    <span
+                                                        class="custom-prev-icon d-flex align-items-center justify-content-center">
+                                                        <i class="bi bi-chevron-left"></i>
+                                                    </span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next custom-next" type="button"
+                                                    data-bs-target="#carouselExampleThreeIndicators"
+                                                    data-bs-slide="next">
+                                                    <span
+                                                        class="custom-next-icon d-flex align-items-center justify-content-center">
+                                                        <i class="bi bi-chevron-right"></i>
+                                                    </span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container-fluid  p-4" style="padding-bottom: 80px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <div
+                                        class="food-card blog-sec-cardThree text-white d-flex flex-column justify-content-between">
+                                        <div class="discount-menu">
+                                            <div class="d-grid p-3 menu-discount">
+                                                <h5><b>25 March</b></h5>
+                                                <h5><b>2025</b></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4">
+                                        <div class="mb-3">
+                                            <h2 class="mb-3"><b>Where Team Spirit Meets the Taste of Passion</b></h2>
+                                            <p style="margin-top: 60px;">
+                                                It's more than just preparing meals — it's about the smiles shared in
+                                                the kitchen, the stories exchanged over recipes, and the bond that turns
+                                                coworkers into a family. Together, we don’t just cook. We create
+                                                experiences.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <span style="color: #FF2B2B; font-weight: 500;">
+                                                <p><b>Mr. Surya</b></p>
+                                            </span>
+                                            <span class="ms-3">
+                                                <i class="bi bi-chat-dots-fill text-secondary"></i> 3 Comments
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-start gap-3 mt-4">
+                                            <div class="container d-flex text-center mt-4 gap-4">
+                                                <button class="carousel-control-prev custom-prev" type="button"
+                                                    data-bs-target="#carouselExampleThreeIndicators"
+                                                    data-bs-slide="prev">
+                                                    <span
+                                                        class="custom-prev-icon d-flex align-items-center justify-content-center">
+                                                        <i class="bi bi-chevron-left"></i>
+                                                    </span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next custom-next" type="button"
+                                                    data-bs-target="#carouselExampleThreeIndicators"
+                                                    data-bs-slide="next">
+                                                    <span
+                                                        class="custom-next-icon d-flex align-items-center justify-content-center">
+                                                        <i class="bi bi-chevron-right"></i>
+                                                    </span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-us section -->
+        <section class="contactus-section" id="contact-us">
+            <div class=" mt-4">
+                <div class="section-title">
+                    <div class="line left me-2" style="min-width: 50px !important;"></div>
+                    <div class="text" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">Contact</div>
+                    <div class="line right ms-2"></div>
+                </div>
+                <h1 class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    Get in Touch!
+                </h1>
+                <p class="text-center p-2" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">Whether
+                    you're planning a family dinner, need help with a reservation, or
+                    just have a quick question <br> we’re always here to serve you.</p>
+            </div>
+            <div class="row contact-info p-4 align-items-center">
+                <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                    <img src="/img/female-receptionist.png" alt="" width="100%">
+                </div>
+                <div class="col-12 col-md-8 p-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-start flex-wrap mb-3"
+                        style="column-gap: 100px;">
+                        <div>
+                            <h4 class="mb-3 contact-heading" data-aos="fade-up" data-aos-delay="200"
+                                data-aos-duration="1000"><b>Contact information</b></h4>
+
+                            <div class="d-grid gap-1 mt-4" data-aos="fade-up" data-aos-delay="250"
+                                data-aos-duration="1000">
+                                <div class="d-flex flex-wrap">
+                                    <a href="#" class="social-icon me-2"><i class="bi bi-telephone-fill fs-5"></i></a>
+                                    <p class="mb-3">+91 98765 43210</p>
+                                </div>
+                                <div class="d-flex flex-wrap">
+                                    <a href="#" class="social-icon me-2"><i class="bi bi-envelope fs-5"></i></a>
+                                    <p class="mb-3">Email: support@foodhub.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="mb-3 contact-heading" data-aos="fade-up" data-aos-delay="200"
+                                data-aos-duration="1000"><b>Our Location</b></h4>
+                            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+                                <a href="#" class="social-icon me-2"><i class="bi bi-geo-alt-fill fs-5"></i></a>
+                                <p class="mb-3">123 Food Street,<br>Chennai, Tamil Nadu 600001</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-start mb-3 gap-4 mt-4">
+                        <div class="mt-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                            <p><b>Follow Us</b></p>
+                            <div>
+                                <a href="#" class="social-icon me-2"><i class="bi bi-linkedin fs-5"></i></a>
+                                <a href="#" class="social-icon me-2"><i class="bi bi-instagram fs-5"></i></a>
+                                <a href="#" class="social-icon me-2"><i class="bi bi-youtube fs-5"></i></a>
+                                <a href="#" class="social-icon me-2"><i class="bi bi-facebook fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- order with best deals section -->
+        <section id="order-deal">
+            <div class="ready-order d-grid justify-content-center align-items-center mt-4">
+
+                <div class="p-2" style="background-color: #101010B2;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="text-center">Are you ready to order with the best deals?</h2>
+                </div>
+                <div class="d-flex justify-content-center p-3" data-aos="zoom-in" data-aos-delay="150"
+                    data-aos-duration="1000">
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer section -->
+        <footer id="footer" style="padding: 30px; background-color: #111; padding-bottom: 30px; margin-top: 60px;"
+            class="footer-sec">
+            <div class="d-flex flex-wrap justify-content-around gap-4 mt-4" style="padding-bottom: 50px;">
+                <div class="footer-box d-flex flex-column gap-3" style="flex: 1 1 300px; max-width: 350px;"
+                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <img src="/img/logoWithName.png" alt="Logo" width="150">
+                    <p class="mt-4">
+                        Experience the richness of South Indian cuisine — made with love, tradition, and
+                        handpicked ingredients.
+                    </p>
+                    <div class="input-group mt-4">
+                        <input type="email" class="form-control" placeholder="Enter your email"
+                            style="background-color: transparent; color: white; border: 1px solid #fff;">
+                        <button class="btn" style="background-color: #ff3d3d; color: white;">Subscribe</button>
+                    </div>
+                </div>
+                <div class="footer-box" style="flex: 1 1 200px; max-width: 250px;" data-aos="fade-up"
+                    data-aos-delay="250" data-aos-duration="1000">
+                    <h5 class="mb-3"><b>Our Links</b></h5>
+                    <ul class="list-unstyled mb-3">
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Home</a></li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">About Us</a>
+                        </li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Dishes</a></li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Gallery</a></li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Blog</a></li>
+                        <li class="mb-2 fs-5 "><a href="#" class="text-white text-decoration-none links">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-box" style="flex: 1 1 200px; max-width: 250px;" data-aos="fade-up"
+                    data-aos-delay="300" data-aos-duration="1000">
+                    <h5 class="mb-3"><b>Legal</b></h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 fs-5 "><a href="#" class="text-white text-decoration-none links">Terms &
+                                Conditions</a></li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Refund &
+                                Cancellation</a></li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Privacy
+                                Policy</a>
+                        </li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Cookie
+                                Policy</a>
+                        </li>
+                        <li class="mb-2 fs-5"><a href="#" class="text-white text-decoration-none links">Help &
+                                Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyrights p-4">
+                <p class="text-center">Copyright© 2025 Mcube Infotech, All Rights Reserved</p>
+            </div>
+            <div class="goTopButton d-flex justify-content-end">
+                <a href="#hero">
+                    <i class="bi bi-arrow-up-circle-fill text-white" style="font-size: 40px;"></i>
+                </a>
+            </div>
+        </footer>
+
+
+    </main>
+
+</body>
+
+<!-- Script for offcanvas bar -->
+<script>
+    document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
+            offcanvas.hide();
+        });
+    });
+</script>
+<!-- Script for nav-bar blur while scrolling -->
+<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 10) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+</script>
+<!-- AOS initialize script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<!-- Script for nav-link active changing while section changing -->
+<script>
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    function activateNavLink() {
+        let scrollY = window.pageYOffset;
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 100;
+            const sectionId = current.getAttribute("id");
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${sectionId}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("scroll", activateNavLink);
+</script>
+
+<!-- Script for go top btn hide in hero section -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const goTopButton = document.querySelector(".goTopButton");
+        const heroSection = document.getElementById("hero");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Hero section is in view, hide the button
+                    goTopButton.style.opacity = '0';
+                    goTopButton.style.pointerEvents = 'none';
+                } else {
+                    // Hero section is out of view, show the button
+                    goTopButton.style.opacity = '1';
+                    goTopButton.style.pointerEvents = 'auto';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(heroSection);
+    });
+</script>
+
+</html>
