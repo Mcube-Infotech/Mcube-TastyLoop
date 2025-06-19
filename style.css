@@ -12,7 +12,7 @@ body {
 .navToggle {
     width: 30px;
     height: 30px;
-    background-image: url('/img/toggleIcon.png');
+    background-image: url('./img/toggleIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 .hero {
-    background-image: url("/img/heroBg.png");
+    background-image: url("./img/heroBg.png");
     height: 100vh;
     background-size: cover;
 }
@@ -174,7 +174,7 @@ p {
 }
 
 .about-us-img-section {
-    background-image: url("/img/about-us-img.png");
+    background-image: url("./img/about-us-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
@@ -261,28 +261,28 @@ p {
 /* dishes section */
 
 .paneer-card {
-    background-image: url("/img/panneer.png");
+    background-image: url("./img/panneer.png");
     background-size: cover;
     height: 450px;
     width: 100%;
 }
 
 .biriyani-card {
-    background-image: url("/img/biriyani.png");
+    background-image: url("./img/biriyani.png");
     background-size: cover;
     height: 450px;
     width: 100%;
 }
 
 .bread-slices-card {
-    background-image: url("/img/bread-slices.png");
+    background-image: url("./img/bread-slices.png");
     background-size: cover;
     height: 450px;
     width: 100%;
 }
 
 .chicken-soup-card {
-    background-image: url("/img/thai-food-spicy-chicken-tendon-soup.png");
+    background-image: url("./img/thai-food-spicy-chicken-tendon-soup.png");
     background-size: cover;
     height: 450px;
     width: 100%;
@@ -311,21 +311,21 @@ p {
 }
 
 .blog-sec-card {
-    background-image: url("/img/blogImg1.png");
+    background-image: url("./img/blogImg1.png");
     background-size: cover;
     height: 500px;
     width: 100%;
 }
 
 .blog-sec-cardTwo {
-    background-image: url("/img/blogImg2.png");
+    background-image: url("./img/blogImg2.png");
     background-size: cover;
     height: 500px;
     width: 100%;
 }
 
 .blog-sec-cardThree {
-    background-image: url("/img/blogImg3.png");
+    background-image: url("./img/blogImg3.png");
     background-size: cover;
     height: 500px;
     width: 100%;
@@ -423,7 +423,7 @@ p {
 /* order with best deals section */
 
 .ready-order {
-    background-image: url("/img/ready-orderImg.png");
+    background-image: url("./img/ready-orderImg.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -432,7 +432,7 @@ p {
 /* footer section */
 
 .footer-sec {
-    background-image: url("/img/footerImg.png");
+    background-image: url("./img/footerImg.png");
     background-repeat: no-repeat;
     background-size: cover;
 
